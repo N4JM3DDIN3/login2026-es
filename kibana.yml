@@ -1,0 +1,22 @@
+# Network - REQUIRED for Docker access
+server.host: "0.0.0.0"
+server.shutdownTimeout: "5s"
+
+# SSL Deactivation
+server.ssl.enabled: false
+elasticsearch.hosts: ["http://elasticsearch:9200"]
+elasticsearch.ssl.verificationMode: none
+
+# Disable noisy Enterprise/Platinum features
+xpack.reporting.enabled: false
+
+xpack.security.encryptionKey: "abcdefghijklmnopqrstuvwxyz123456"
+xpack.encryptedSavedObjects.encryptionKey: "abcdefghijklmnopqrstuvwxyz123456"
+xpack.reporting.encryptionKey: "abcdefghijklmnopqrstuvwxyz123456"
+
+# the username and password that the Kibana server uses to perform maintenance on the Kibana
+# index at startup. Your Kibana users still need to authenticate with Elasticsearch, which
+# is proxied through the Kibana server.
+elasticsearch.username: "kibana_system"
+elasticsearch.password: "hPh_lEknC=O0uCD3waFV"
+

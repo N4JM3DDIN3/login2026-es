@@ -1,0 +1,17 @@
+services:
+  elasticsearch:
+    image: elasticsearch:9.3.0
+    ports:
+      - 9200:9200
+    environment:
+      discovery.type: 'single-node'
+      xpack.security.enabled: true
+      xpack.security.authc.api_key.enabled: true
+      ELASTIC_PASSWORD: '<your_password>'
+      ES_JAVA_OPTS: '-Xmx2g -Xms2g'
+  kibana:
+    image: docker.elastic.co/kibana/kibana:9.3.0
+    volumes:
+      - ./kibana.yml:/usr/share/kibana/config/kibana.yml
+    ports:
+      - 5601:5601
