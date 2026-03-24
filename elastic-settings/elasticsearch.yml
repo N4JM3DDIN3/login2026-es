@@ -1,0 +1,8 @@
+cluster.name: "mon-cluster"
+network.host: 0.0.0.0
+
+xpack.security.enabled: false
+transport.publish_host: _site_
+
+discovery.seed_hosts: ["elasticsearch", "elasticsearch2", "elasticsearch3"]
+cluster.initial_master_nodes: ["elasticsearch", "elasticsearch2", "elasticsearch3"]
