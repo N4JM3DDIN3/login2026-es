@@ -14,6 +14,41 @@
       }
     },
     {
+      "convert": {
+        "field": "mag",
+        "type": "float",
+        "ignore_failure": true
+      }
+    },
+    {
+      "convert": {
+        "field": "depth",
+        "type": "float",
+        "ignore_failure": true
+      }
+    },
+    {
+      "convert": {
+        "field": "latitude",
+        "type": "float",
+        "ignore_failure": true
+      }
+    },
+    {
+      "convert": {
+        "field": "longitude",
+        "type": "float",
+        "ignore_failure": true
+      }
+    },
+    {
+      "convert": {
+        "field": "dmin",
+        "type": "float",
+        "ignore_failure": true
+      }
+    },
+    {
       "set": {
         "field": "location",
         "value": "{{latitude}}, {{longitude}}",
