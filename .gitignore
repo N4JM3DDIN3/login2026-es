@@ -22,3 +22,5 @@ env/
 *.toml
 uv.lock
 kibana.yml
+*.ipynb_checkpoints/
+*.ipynb_checkpoints
